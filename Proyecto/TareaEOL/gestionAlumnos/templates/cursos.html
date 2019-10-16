@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<style>
+		th, td {
+			border: 1px solid black;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Cursos</title>
+</head>
+<body>
+	<div class="content-wrapper">
+		<section class="content-header" style="text-align: center;">
+			<h1>
+				Seleccione Curso
+			</h1>
+		</section>
+		<section class="content" style="text-align: center;">
+			<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+			  <tr>
+			    <th>Curso</th>
+			    <th>Acciones</th>
+			  </tr>
+			 	{% for curso in cursos %}
+			 	<tr>
+					<td> {{ curso }} </td>
+					<td> <a href="{% url 'lista_alumnos' curso.id %}">Ver Alumnos</a> </td>
+				</tr>
+				{% empty %}
+  					<td>Sin Cursos</td>
+				{% endfor %}
+			</table>
+
+		</section>
+	</div>
+	
+
+</form>
+</body>
+</html>
+

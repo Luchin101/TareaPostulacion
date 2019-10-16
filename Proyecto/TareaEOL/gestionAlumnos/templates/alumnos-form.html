@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Crear</title>
+</head>
+<body>
+
+	<div class="content-wrapper">
+		<section class="content-header" style="text-align: center;">
+			<h1>
+				Agregar Alumnos
+			</h1>
+		</section>
+		<section class="content" style="text-align: center;">
+			<form method="post">{% csrf_token %}
+				<textarea id="nombres" name="nombres" rows="10" cols="50" onchange="javascript:val();"></textarea>
+			    <button id="myBtn" disabled type="submit">Guardar</button>
+			    <a href="{% url 'lista_alumnos' cursoid %}">Volver</a>
+			</form>
+		</section>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+	function val() {
+		lista = document.getElementById("nombres").value
+		if (lista.trim() == ""){
+			document.getElementById("myBtn").disabled = true;
+		}
+		else {
+			document.getElementById("myBtn").disabled = false;
+		}
+	}
+</script>

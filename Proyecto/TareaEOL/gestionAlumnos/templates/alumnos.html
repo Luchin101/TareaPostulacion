@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<style>
+		th, td {
+			border: 1px solid black;
+		}
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Alumnos</title>
+</head>
+<body>
+	
+<div class="content-wrapper">
+	<section class="content-header" style="text-align: center;">
+		<h1>
+			{{ alumnos.1.curso }}
+		</h1>
+	</section>
+	<section class="content" style="text-align: center;">
+		<form action="{% url 'eliminar' cursoid %}" method="post">{% csrf_token %}
+			<table style="border:1px solid black;margin-left:auto;margin-right:auto;">
+			  <tr>
+			    <th>Nombre</th>
+			    <th>Eliminar</th>
+			  </tr>
+			 	{% for alumno in alumnos %}
+			 	<tr>
+					<td> {{ alumno.alumno }} </td>
+					<td> <input type="checkbox" name="checkbox" value='{{ alumno.id }}'> </td>
+				</tr>
+				{% empty %}
+  					<td>Sin Alumnos</td>
+				{% endfor %}
+			</table>
+			<a href="{% url 'crear' cursoid %}">Agregar Alumnos</a>
+			<button type="submit">Eliminar Alumnos</button>
+			<a href="{% url 'clase' %}">Volver</a>
+		</form>
+	</section>
+</div>
+</body>
+</html>

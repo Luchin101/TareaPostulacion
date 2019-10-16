@@ -12,15 +12,16 @@ def crear (request, id):
 		alumno = request.POST.get("nombres","").split('\n')
 		curso = Curso.objects.get(id=id)
 		for a in alumno:
-			estudiante = Alumno()
-			estudiante.nombre = a
-			estudiante.save()
+			if a.strip():
+				estudiante = Alumno()
+				estudiante.nombre = a.strip()
+				estudiante.save()
 
-			gCurso = GestionCurso()
-			gCurso.alumno = estudiante
-			gCurso.curso = curso
-			gCurso.save()
-
+				gCurso = GestionCurso()
+				gCurso.alumno = estudiante
+				gCurso.curso = curso
+				gCurso.save()
+			
 		return redirect('lista_alumnos', id)
 
 	return render(request, 'alumnos-form.html', {'cursoid':id})

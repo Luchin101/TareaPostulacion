@@ -34,17 +34,30 @@ Notas
 El proyecto tiene almacenado 3 Cursos para el ingreso de alumnos.
 Puede utilizar la siguiente lista de nombres para probar el proyecto:
 
-Hernández Hernández Juan Carlos 
+Hernández Hernández Juan Carlos
+
 Gonzalez García María 
+
 Perez García Juana 
+
 Rojas Hernández José 
+
 Maldonado García Juan 
+
 Alarcon Martínez Miguel Ángel 
+
 Mansilla Hernández Miguel 
+
 Flores García Jesús 
+
 García Hernández José Luis 
+
 Cornejo Hernández Juana 
+
 Sanchez Hernández María Guadalupe 
+
 Vidal Hernández Pedro 
+
 Bravo Martínez Alejandro 
+
 Hernández Hernández Francisco 

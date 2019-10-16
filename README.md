@@ -28,6 +28,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 
 Ahora abra el navegador web y escriba la dirección http://127.0.0.1:8000/ o localhost:8000 y prodrá visualizar el proyecto.
+Para utilizar la base de datos tiene que ir a la dirección localhost:8000/admin con el usuario 'admin' y password 'admin'
+
 
 Notas
 
